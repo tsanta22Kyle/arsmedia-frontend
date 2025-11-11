@@ -10,6 +10,7 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
+    "baseUrl": ".",
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
@@ -19,7 +20,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"],
+      "@/components/*" : ["./app/components/*"]
     }
   },
   "include": [
@@ -29,6 +31,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "tailwind.confing.js"  ],
   "exclude": ["node_modules"]
 }
