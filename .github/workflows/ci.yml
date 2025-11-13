@@ -10,7 +10,7 @@ on:
     branches: [ "preprod" ,"dev"]
 
 jobs:
-  build:
+  build-and-test:
 
     runs-on: ubuntu-latest
 
@@ -22,10 +22,10 @@ jobs:
         node-version: v23.7.0
         cache: 'npm'
     - name: install deps
-    - run: npm ci
+      run: npm ci
     
     - name: build project
-    - run: npm run build --if-present
+      run: npm run build --if-present
 
     - name: tests
-    - run: npm test
+      run: npm test
