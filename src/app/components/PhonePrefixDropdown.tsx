@@ -10,7 +10,7 @@ const prefixes = [
   { code: "+91", country: "IN" },
 ];
 
-export default function PhonePrefixDropdown({ value, onChange }) {
+export default function PhonePrefixDropdown({ value, onChange }:{value : string , onChange : (value :string)=> void}) {
   const [open, setOpen] = useState(false);
 
   return (
