@@ -2,20 +2,20 @@
 import { ButtonHTMLAttributes } from "react";
 
 interface Props {
-  label?: string;
+  children?: string;
   className?: string;
   variant?: string;
   onClick?: () => void;
 }
 
 export default function Button({
-  label = "label",
+  children ,
   className,
   variant = "default",
   onClick = ()=>{}
 }: Props) {
   switch (variant) {
     case "default":
-      return <button onClick={onClick} className={` bg-primary text-white px-8 py-2  ${className}  `}> {label} </button>;
+      return <button  onClick={onClick} className={` ${className} cursor-pointer hover:opacity-90 bg-primary text-white px-8 py-4 rounded-md`}> {children} </button>
   }
 }

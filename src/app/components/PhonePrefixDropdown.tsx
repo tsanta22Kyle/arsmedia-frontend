@@ -14,11 +14,11 @@ export default function PhonePrefixDropdown({ value, onChange }:{value : string 
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative w-14 bg-amber-500">
+    <div className="relative w-14 ">
       {/* Trigger */}
       <button
         onClick={(e) =>  {e.preventDefault() ;setOpen(!open)}}
-        className="w-full flex items-center justify-between  bg-white hover:border-gray-400 transition"
+        className="w-full flex items-center justify-between   hover:border-gray-400 transition"
       >
         <span className="font-medium text-gray-700">{value}</span>
         <ChevronDown
